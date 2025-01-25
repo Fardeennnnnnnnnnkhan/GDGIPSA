@@ -50,10 +50,10 @@ const TeamCard = ({ member }) => {
           </Link>
           {member.role === "WebD Team Lead" ||
           member.role === "WebD Team Member" ||
-          member.role === "Tech Lead" ? (
+          member.role === "Tech Lead" || member.role == "Co-Lead Assistant"? (
             <Link
               to={member.github}
-              className="text-gray-500 hover:text-gray-100 transition-transform transform hover:scale-125"
+              className="text-gray-500 hover:text-gray-700 transition-transform transform hover:scale-125"
             >
               <FaGithub className="w-7 h-7" />
             </Link>

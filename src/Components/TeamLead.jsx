@@ -8,9 +8,7 @@ const TeamLead = () => {
   const { theme } = useTheme()
   return (
     <>
-      <div className={`flex flex-col md:flex-row  items-center justify-center min-h-[80vh] ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"} px-12 py-12`}>
-    <RupeshSir/>
-    </div>
+     
     <div className={`flex flex-col md:flex-row  items-center justify-center min-h-[80vh] ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"} px-12 py-12`}>
       <div className="md:w-1/2 w-full flex justify-center mt-8 md:mt-0">
         <div className="w-60 h-60 rounded-full overflow-hidden flex-shrink-0 border-4 border-[#0F9D58] shadow-xl sm:w-80 sm:h-80">
@@ -65,6 +63,9 @@ const TeamLead = () => {
           </button>
         </div>
       </div>
+    </div>
+    <div className={`flex flex-col md:flex-row  items-center justify-center min-h-[80vh] ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"} px-12 py-12`}>
+    <RupeshSir/>
     </div>
     </>
 

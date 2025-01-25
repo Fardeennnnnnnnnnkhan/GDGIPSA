@@ -69,7 +69,7 @@ const Team = () => {
         img: CoLeadAssist,
         group: "Lead",
         instagram: "https://www.instagram.com/chic_ice_cream",
-        linkedin: "https://www.linkedin.com/in/abhivyakt-bhati/",
+        github: "https://github.com/ChicIceCream",
       },
       {
     
