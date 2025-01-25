@@ -1,0 +1,340 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Timeline wrapper */
+.timeline-wrapper {
+  margin-top: 10px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Timeline container */
+.container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Slightly moved down */
+  animation: fadeIn 1s ease forwards; /* Trigger fade-in animation */
+}
+
+/* Timeline image */
+.container img {
+  position: absolute;
+  width: 60px;
+  border-radius: 50%;
+  right: -30px;
+  top: 32px;
+  z-index: 10;
+  object-fit: cover;
+}
+
+/* Text box styling */
+.text-box {
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 12px;
+  font-size: 15px;
+  background: linear-gradient(135deg, #f5f4f4, #f8f9fa);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), 0px 15px 40px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #eef1f3, #ffffff);
+}
+
+.text-box h2 {
+  font-size: 1.75rem;
+  color: #2d3142;
+  margin-bottom: 8px;
+}
+
+.text-box h3 {
+  font-size: 1rem;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+.text-box p {
+  font-size: 0.875rem;
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+/* Arrow styles */
+.leftContainer-arrow,
+.rightContainer-arrow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: inherit;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.leftContainer-arrow {
+  top: 50%;
+  right: -6px;
+}
+
+.rightContainer-arrow {
+  top: 50%;
+  left: -6px;
+}
+
+/* Updated Timeline Line */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  background-color: rgba(111, 110, 110, 0.7); /* Darker color for visibility */
+  height: 100%;
+  z-index: 0; /* Make sure it's above other elements */
+  border-radius: 50px;
+  animation: moveline 6s linear forwards;
+}
+
+body.dark-mode .timeline-icon {
+  border: 3px solid #4a5568; /* Dark border for the icon in dark mode */
+}
+
+/* Dark Mode Updates for Text and Background */
+body.dark-mode .timeline-wrapper {
+  background-color: #1a202c; /* Dark background for timeline wrapper */
+}
+
+body.dark-mode .timeline-line {
+  background-color: rgba(200, 200, 200, 0.7); /* Lighter line for dark mode */
+}
+
+body.dark-mode .text-box {
+  background: linear-gradient(135deg, #2d3748, #4a5568); /* Darker gradient for text box */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), 0px 6px 20px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+body.dark-mode .text-box h2 {
+  color: #e2e8f0; /* Light text color for title */
+}
+
+body.dark-mode .text-box h3,
+body.dark-mode .text-box p {
+  color: #cbd5e0; /* Light text for description and content */
+}
+
+body.dark-mode .text-box small {
+  color: #e2e8f0; /* Light color for small text */
+}
+
+/* Adjust Button Colors for Dark Mode */
+body.dark-mode .text-box button {
+  background-color: #38b2ac; /* Green color for button */
+}
+
+body.dark-mode .text-box button:hover {
+  background-color: #319795; /* Darker green on hover */
+}
+
+body.dark-mode .leftContainer-arrow,
+body.dark-mode .rightContainer-arrow {
+  background: rgba(0, 0, 0, 0.5); /* Dark arrows for dark mode */
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+/* Fade-in effect for containers */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 600px) {
+  .timeline-wrapper {
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+
+  .timeline-wrapper::after {
+    left: 25px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .text-box {
+    font-size: 13px;
+    padding: 15px;
+  }
+
+  .text-box small {
+    margin-bottom: 10px;
+  }
+
+  .rightContainer {
+    left: 0px;
+  }
+
+  .rightContainerImg,
+  .leftContainerImg {
+    left: -23px;
+  }
+
+  .rightContainer-arrow,
+  .leftContainer-arrow {
+    width: 10px;
+    height: 10px;
+    /* border-right: 10px solid ; */
+    border-left: 0;
+    left: -10px;
+  }
+
+  .timeline-line {
+    left: 23px;
+    width: 3px; /* Reduced width for small screens */
+  }
+
+  .container img {
+    width: 50px; /* Smaller images */
+    right: -25px;
+    top: 28px;
+  }
+}
+
+
+
+
+
+
+*{ 
+   font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+ 
+}
+/* Container Styling */
+/* Moving Text Section */
+#movingtext {
+  overflow: hidden;
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #ffffff, #f9f9f9);
+  position: relative;
+  /* margin: 0px 10px 0px 10px ;
+  border-top:1px solid black;
+  border-bottom:1px solid black; */
+}
+
+/* Text Wrapper */
+.con {
+  display: flex;
+  white-space: nowrap;
+  gap: 2vw;
+  animation: scroll 10s linear infinite;
+}
+
+/* Text Styling */
+#movingtext span {
+  font-size: 10vw;
+  font-weight: bold;
+  display: inline-block;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Remove scrollbar */
+#movingtext::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  #movingtext {
+    height: 20vh; /* Reduce height on smaller devices */
+  }
+  #movingtext span {
+    font-size: 8vw; /* Adjust font size */
+  }
+}
+
+@media (max-width: 480px) {
+  #movingtext {
+    height: 10vh; /* Further reduce height for very small devices */
+  }
+  #movingtext span {
+    font-size: 16vw; /* Make font smaller for small screens */
+    letter-spacing: 0.5vw; /* Increase spacing for readability */
+  }
+}
+
+
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  transform: skewX(-15deg);
+  transition: transform 0.3s;
+}
+
+.box:hover::before {
+  transform: translateX(100%);
+}
+
+
+/* .text-box {
+  background: #ffc857;
+  color: #2d3142;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0px white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 0px #343a40;
+}
+
+.timeline-wrapper::after {
+  background: #343a40;
+} */
