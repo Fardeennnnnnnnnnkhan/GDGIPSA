@@ -87,75 +87,92 @@ const Header = () => {
     </header>
   
     {isMenuOpen && (
-      <motion.div
-        className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+  <motion.div
+    className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.3, ease: "easeInOut" }}
+    onClick={() => setIsMenuOpen(false)}
+  >
+    <motion.div
+      className={`w-[50vw] h-full ${
+        theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-black"
+      } flex flex-col items-center shadow-lg`}
+      initial={{ x: "100%" }}
+      animate={{ x: 0 }}
+      exit={{ x: "100%" }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        className={`absolute top-4 right-4 ${
+          theme === "dark" ? "text-white" : "text-black"
+        }`}
         onClick={() => setIsMenuOpen(false)}
       >
-        <motion.div
-          className={`w-[50vw] h-full ${
-            theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-black"
-          } flex flex-col items-center shadow-lg`}
-          initial={{ x: "100%" }}
-          animate={{ x: 0 }}
-          exit={{ x: "100%" }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          onClick={(e) => e.stopPropagation()}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+          stroke="currentColor"
+          className="w-6 h-6"
         >
-          <button
-            className={`absolute top-4 right-4 ${
-              theme === "dark" ? "text-white" : "text-black"
-            }`}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-  
-          <img className="w-40 h-40 mt-8" src={gdg} alt="GDG Logo" />
-  
-          <Link
-            to="/"
-            className="shadow-lg py-2 px-6 w-[90%] my-2 text-center text-xl font-medium hover:bg-gray-100"
-          >
-            Home
-          </Link>
-          <Link
-            to="/event"
-            className="shadow-lg py-2 px-6 w-[90%] my-2 text-center text-xl font-medium hover:bg-gray-100"
-          >
-            Events
-          </Link>
-          <Link
-            to="/team"
-            className="shadow-lg py-2 px-6 w-[90%] my-2 text-center text-xl font-medium hover:bg-gray-100"
-          >
-            Team
-          </Link>
-          <Link
-            to="/blog"
-            className="shadow-lg py-2 px-6 w-[90%] my-2 text-center text-xl font-medium hover:bg-gray-100"
-          >
-            Blog
-          </Link>
-        </motion.div>
-      </motion.div>
-    )}
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <img className="w-40 h-40 mt-8" src={gdg} alt="GDG Logo" />
+
+      <Link
+        to="/"
+        className={`shadow-lg py-2 px-6 w-[90%] my-2 text-center text-xl font-medium ${
+          theme === "dark"
+            ? "hover:bg-gray-700 hover:text-white"
+            : "hover:bg-gray-100 hover:text-black"
+        }`}
+      >
+        Home
+      </Link>
+      <Link
+        to="/event"
+        className={`shadow-lg py-2 px-6 w-[90%] my-2 text-center text-xl font-medium ${
+          theme === "dark"
+            ? "hover:bg-gray-700 hover:text-white"
+            : "hover:bg-gray-100 hover:text-black"
+        }`}
+      >
+        Events
+      </Link>
+      <Link
+        to="/team"
+        className={`shadow-lg py-2 px-6 w-[90%] my-2 text-center text-xl font-medium ${
+          theme === "dark"
+            ? "hover:bg-gray-700 hover:text-white"
+            : "hover:bg-gray-100 hover:text-black"
+        }`}
+      >
+        Team
+      </Link>
+      <Link
+        to="/blog"
+        className={`shadow-lg py-2 px-6 w-[90%] my-2 text-center text-xl font-medium ${
+          theme === "dark"
+            ? "hover:bg-gray-700 hover:text-white"
+            : "hover:bg-gray-100 hover:text-black"
+        }`}
+      >
+        Blog
+      </Link>
+    </motion.div>
+  </motion.div>
+)}
+
   </div>
   
   )
