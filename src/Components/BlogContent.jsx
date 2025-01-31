@@ -2,25 +2,27 @@ import React  ,{useState} from 'react'
 import { motion } from "framer-motion";
 import { useTheme } from '../Context/ThemeContext';
 import { Link } from 'react-router-dom';
+import Trisha from '../assests/TrishaMishra.jpeg'
+import abhivaykt from '../assests/CoLeadAssist.jpg'
+import chhavi from '../assests/ChhaviSharma.jpg'
 const BlogContent = () => {
 
   const blogs = [
-    {
-      id: 1,
-      title: "Solution Challenge",
-      author: "Trisha Mishra",
-      date: "18 Jan 2025",
+
+    {id:3,
+      title: "2025, the year of AI Agents!",
       description:
-        "The Solution Challenge gives you a great chance to make that idea come truehis year’s theme isn’t just another contest — it’s asking innovators, problem-solvers, and dreamers to step up.Imagine making an app that has a big impact on healthcare in areas with little access, or building a platform to fight climate change head-on.These aren’t just wild ideas; they’re the kind of projects that can make a difference, which the Solution Challenge wants to see.",
-      tags: ["AI For Better Tomorrow"],
-      source: "https://medium.com/@gdgipsa/understanding-the-theme-aa4b52299ad8",
-      image:
-        "https://miro.medium.com/v2/resize:fit:828/format:webp/1*eiC7078DdAVMYaQam39sDg.png",
-      relatedImages: [
-        "https://images.unsplash.com/photo-1517817748499-49ec8b66f81c?q=80&w=2070&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1504151932400-72d4384f04b3?q=80&w=2070&auto=format&fit=crop",
-      ],
+        "I’m sure we all remember the release of ChatGPT and how it took the world by storm. Since that day life has been made easier for a whole bunch of people, from writing essays to finishing code. It gave us a glimpse at imagining how a futuristic world should be like.Then came Devin, the fear-inducing maniac for developers who were sure it would take their jobs. All companies rushing to try it out and developers getting anxiety attacks (heck even I was one of them!).Luckily, Devin turned out to be a flop, and returned the life and hope back into our bodies. ",
+      tag: "Software Engineering",
+        link: "https://medium.com/@chics-den/2025-the-year-of-ai-agents-7063ca58e44f",
+      author: "Abhivyakt Bhati",
+      authorImg: "https://4kfaces.com/images/male5.png",
+      source: "https://medium.com/@chics-den/2025-the-year-of-ai-agents-7063ca58e44f",
+      date: "13 Jan 2025",
+      image: "https://miro.medium.com/v2/resize:fit:828/format:webp/0*U92xafGniV1vXwo7.png",
+      relatedImages: "https://images.unsplash.com/photo-1559757171-f6ecf56f05d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
     },
+
     {
       id: 2,
       title: "Join the GDGOC Solutions Challenge 2025: Innovate for a Better Tomorrow",
@@ -37,19 +39,38 @@ const BlogContent = () => {
         "https://images.unsplash.com/photo-1573164574235-9281b2e8934e?q=80&w=2070&auto=format&fit=crop",
       ],
     },
-    {id:3,
-      title: "2025, the year of AI Agents!",
+    {
+      id: 1,
+      title: "Solution Challenge",
+      author: "Trisha Mishra",
+      date: "17 Jan 2025",
       description:
-        "I’m sure we all remember the release of ChatGPT and how it took the world by storm. Since that day life has been made easier for a whole bunch of people, from writing essays to finishing code. It gave us a glimpse at imagining how a futuristic world should be like.Then came Devin, the fear-inducing maniac for developers who were sure it would take their jobs. All companies rushing to try it out and developers getting anxiety attacks (heck even I was one of them!).Luckily, Devin turned out to be a flop, and returned the life and hope back into our bodies. ",
-      tag: "Software Engineering",
-        link: "https://medium.com/@chics-den/2025-the-year-of-ai-agents-7063ca58e44f",
-      author: "Abhivyakt Bhati",
-      authorImg: "https://4kfaces.com/images/male5.png",
-      source: "https://medium.com/@chics-den",
-      date: "13 Jan 2022",
-      image: "https://miro.medium.com/v2/resize:fit:828/format:webp/0*U92xafGniV1vXwo7.png",
-      relatedImages: "https://images.unsplash.com/photo-1559757171-f6ecf56f05d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+        "The Solution Challenge gives you a great chance to make that idea come truehis year’s theme isn’t just another contest — it’s asking innovators, problem-solvers, and dreamers to step up.Imagine making an app that has a big impact on healthcare in areas with little access, or building a platform to fight climate change head-on.These aren’t just wild ideas; they’re the kind of projects that can make a difference, which the Solution Challenge wants to see.",
+      tags: ["AI For Better Tomorrow"],
+      source: "https://medium.com/@gdgipsa/understanding-the-theme-aa4b52299ad8",
+      image:
+        "https://miro.medium.com/v2/resize:fit:828/format:webp/1*eiC7078DdAVMYaQam39sDg.png",
+      relatedImages: [
+        "https://images.unsplash.com/photo-1517817748499-49ec8b66f81c?q=80&w=2070&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1504151932400-72d4384f04b3?q=80&w=2070&auto=format&fit=crop",
+      ],
     },
+
+  
+  
+    {
+      "id": 5,
+      "title": "Is Open Source Taking Over ChatGPT?",
+      "description": "The article explores the rise of open-source AI models and their potential to rival proprietary systems like ChatGPT. It discusses the benefits of open-source development, including transparency, community collaboration, and accelerated innovation, while also addressing challenges such as resource constraints and quality control.",
+      "tag": "Artificial Intelligence",
+      "link": "https://medium.com/@chics-den/is-opensource-taking-over-chatgpt-a4e9e1219c57",
+      "author": "Abhivyakt Bhati",
+      "authorImg": "https://4kfaces.com/images/male5.png",
+      "source": "https://medium.com/@chics-den/is-opensource-taking-over-chatgpt-a4e9e1219c57",
+      "date": "January 26, 2025",
+      "image": "https://miro.medium.com/v2/resize:fit:750/format:webp/1*atXCxx5p_Z_ZNQZpnfvD9A.png",
+      "relatedImages": "https://images.unsplash.com/photo-1559757171-f6ecf56f05d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+    },    
     
     
   ];
@@ -70,55 +91,51 @@ const BlogContent = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-               {
-                id: 1,
-                title: "Solution Challenge",
-                author: "Trisha Mishra",
-                date: "18 Jan 2025",
-                description:
-                  "The Solution Challenge gives you a great chance to make that idea come truehis year’s theme isn’t just another contest — it’s asking innovators, problem-solvers, and dreamers to step up.Imagine making an app that has a big impact on healthcare in areas with little access, or building a platform to fight climate change head-on.These aren’t just wild ideas; they’re the kind of projects that can make a difference, which the Solution Challenge wants to see.",
-                tags: ["AI For Better Tomorrow"],
-                source: "https://medium.com/@gdgipsa/understanding-the-theme-aa4b52299ad8",
-                authorImg: "https://4kfaces.com/images/male5.png",
-
-                img:
-                  "https://miro.medium.com/v2/resize:fit:828/format:webp/1*eiC7078DdAVMYaQam39sDg.png",
-                relatedImages: [
-                  "https://images.unsplash.com/photo-1517817748499-49ec8b66f81c?q=80&w=2070&auto=format&fit=crop",
-                  "https://images.unsplash.com/photo-1504151932400-72d4384f04b3?q=80&w=2070&auto=format&fit=crop",
-                ],
-              },
-              {
-                title: "2025, the year of AI Agents!",
-                description:
-                  "I’m sure we all remember the release of ChatGPT and how it took the world by storm. Since that day life has been made easier for a whole bunch of people, from writing essays to finishing code. It gave us a glimpse at imagining how a futuristic world should be like.Then came Devin, the fear-inducing maniac for developers who were sure it would take their jobs. All companies rushing to try it out and developers getting anxiety attacks (heck even I was one of them!).Luckily, Devin turned out to be a flop, and returned the life and hope back into our bodies. ",
-                tag: "Software Engineering",
-                  link: "https://medium.com/@chics-den/2025-the-year-of-ai-agents-7063ca58e44f",
-                author: "Abhivyakt Bhati",
-                authorImg: "https://4kfaces.com/images/male5.png",
-                date: "13 Jan 2022",
-                img: "https://miro.medium.com/v2/resize:fit:828/format:webp/0*U92xafGniV1vXwo7.png",
-                relatedImg: "https://images.unsplash.com/photo-1559757171-f6ecf56f05d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
-              },
-              {
-                id: 2,
-                title: "Join the GDGOC Solutions Challenge 2025: Innovate for a Better Tomorrow",
-                author: "Chhavi Sharma",
-                date: "15 jan 2025",
-                description:
-                  "The GDGOC Solutions Challenge 2025 is here, offering student developers across India a platform to combine creativity and technology to solve real-world problems. Organized by Google Developer Groups On Campus (GDGOC) in collaboration with Hack2Skill, this challenge is your chance to address pressing global issues like education, healthcare, sustainability, and more using cutting-edge Google Developer technologies.",
-                tags: ["Productivity", "Tools"],
-                source: "https://medium.com/@gdgipsa/join-the-gdgoc-solutions-challenge-2025-innovate-for-a-better-tomorrow-cd4cde30a9de",
-                authorImg: "https://4kfaces.com/images/male5.png",
-
-                img:
-                  "https://miro.medium.com/v2/resize:fit:828/format:webp/1*uDv47A6Wdrh7-T9iXyC8ew.png",
-                relatedImages: [
-                  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop",
-                  "https://images.unsplash.com/photo-1573164574235-9281b2e8934e?q=80&w=2070&auto=format&fit=crop",
-                ],
-              },
+                 {
+                  "title": "2025, the year of AI Agents!",
+                  "description": "ChatGPT’s release transformed the world, streamlining tasks from writing to coding. It showcased a glimpse of the future, but then came Devin, feared by developers as a job threat. Companies rushed to test it, causing widespread anxiety. However, Devin ultimately failed, restoring hope and proving that human expertise still plays a crucial role in development.",
+                  "tag": "Software Engineering",
+                  "link": "https://medium.com/@chics-den/2025-the-year-of-ai-agents-7063ca58e44f",
+                  "author": "Abhivyakt Bhati",
+                  "authorImg": abhivaykt,
+                  "date": "13 Jan 2022",
+                  "img": "https://miro.medium.com/v2/resize:fit:828/format:webp/0*U92xafGniV1vXwo7.png",
+                  "relatedImg": "https://images.unsplash.com/photo-1559757171-f6ecf56f05d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
+                },
              
+           
+              {
+                "id": 2,
+                "title": "Join the GDGOC Solutions Challenge 2025: Innovate for a Better Tomorrow",
+                "author": "Chhavi Sharma",
+                "date": "15 Jan 2025",
+                "description": "The GDGOC Solutions Challenge 2025 offers student developers across India an opportunity to combine creativity and technology. Organized by GDGOC in collaboration with Hack2Skill, this competition empowers students to address real-world problems in education, healthcare, and sustainability using innovative Google Developer technologies.",
+                "tags": ["Productivity", "Tools"],
+                "source": "https://medium.com/@gdgipsa/join-the-gdgoc-solutions-challenge-2025-innovate-for-a-better-tomorrow-cd4cde30a9de",
+                "authorImg": chhavi,
+                "img": "https://miro.medium.com/v2/resize:fit:828/format:webp/1*uDv47A6Wdrh7-T9iXyC8ew.png",
+                "relatedImages": [
+                  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop",
+                  "https://images.unsplash.com/photo-1573164574235-9281b2e8934e?q=80&w=2070&auto=format&fit=crop"
+                ]
+              },
+              {
+                "id": 1,
+                "title": "Solution Challenge",
+                "author": "Trisha Mishra",
+                "date": "18 Jan 2025",
+                "description": "The Solution Challenge gives you a great chance to bring your ideas to life. This year’s theme challenges innovators, problem-solvers, and dreamers to create impactful solutions. Imagine developing an app for healthcare in remote areas or a platform tackling climate change. These aren’t just ideas—they are projects that can drive real change.",
+                "tags": ["AI For Better Tomorrow"],
+                "source": "https://medium.com/@gdgipsa/understanding-the-theme-aa4b52299ad8",
+                "authorImg": Trisha,
+                "img": "https://miro.medium.com/v2/resize:fit:828/format:webp/1*eiC7078DdAVMYaQam39sDg.png",
+                "relatedImages": [
+                  "https://images.unsplash.com/photo-1517817748499-49ec8b66f81c?q=80&w=2070&auto=format&fit=crop",
+                  "https://images.unsplash.com/photo-1504151932400-72d4384f04b3?q=80&w=2070&auto=format&fit=crop"
+                ]
+              },
+            
+            
             ].map((post, index) => (
               <motion.div
                 key={index}
